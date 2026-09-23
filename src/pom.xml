@@ -1,0 +1,81 @@
+<!--
+  ~ Copyright (c) 2026 North Dakota State University
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+        <groupId>com.evolveum.polygon</groupId>
+		<relativePath />
+		<artifactId>connector-parent</artifactId>
+		<version>1.5.2.0</version>
+	</parent>
+
+	<groupId>edu.ndsu.eci.midpoint</groupId>
+	<artifactId>google-analytics-connector</artifactId>
+	<version>3.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<name>GoogleAnalytics</name>
+
+	<properties>
+		<connectorPackage>edu.ndsu.eci.midpoint.google_analytics_connector</connectorPackage>
+		<connectorClass>GoogleAnalyticsConnector</connectorClass>
+	</properties>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-assembly-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+                    <source>11</source>
+                    <target>11</target>
+                </configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+			</plugin>
+			<plugin>
+                <groupId>org.apache.rat</groupId>
+                <artifactId>apache-rat-plugin</artifactId>
+                <version>0.17</version>
+            </plugin>
+		</plugins>
+	</build>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.google.analytics</groupId>
+			<artifactId>google-analytics-admin</artifactId>
+			<version>0.107.0</version>
+		</dependency>
+	</dependencies>
+	<scm>
+		<developerConnection>scm:git:ssh://git@github.com/NDSU-Information-Technology/google-analytics-connector.git</developerConnection>
+		<url>https://github.com/NDSU-Information-Technology/google-analytics-connector</url>
+		<connection>scm:git:ssh://git@github.com/NDSU-Information-Technology/google-analytics-connector.git</connection>
+	  <tag>HEAD</tag>
+  </scm>
+</project>
