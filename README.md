@@ -46,7 +46,7 @@ https://developers.google.com/analytics/devguides/config/admin/v1/quickstart-cli
 | jsonPath | Path to json file with creds |
 | directRole | Role to assign, such as predefinedRoles/analyst |
 
-The role can be later changed if the person needs something different.
+The role can be later changed directly in Google Analytics if the person needs something different.
 
 
 ## Schema
